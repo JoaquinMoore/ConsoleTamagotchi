@@ -1,0 +1,19 @@
+# Carpetas de salida de compilación
+bin/
+obj/
+
+# Archivos de configuración local
+*.suo
+*.user
+*.vs/
+
+# Archivos de respaldo y temporales
+*~
+*.bak
+
+# Archivos de caché y dependencias de NuGet
+packages/
+*.nupkg
+
+# Archivos de configuración de Visual Studio
+*.vsconfig
