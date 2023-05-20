@@ -5,7 +5,7 @@
 # Archivos de configuración local
 *.suo
 *.user
-*.vs/
+.vs/
 
 # Archivos de respaldo y temporales
 *~
