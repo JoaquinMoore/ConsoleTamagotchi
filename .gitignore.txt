@@ -1,6 +1,6 @@
 # Carpetas de salida de compilación
-bin/
-obj/
+/bin/
+/obj/
 
 # Archivos de configuración local
 *.suo
