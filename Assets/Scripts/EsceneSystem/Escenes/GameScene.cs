@@ -1,4 +1,6 @@
-﻿public sealed class GameScene : Scene
+﻿using Timer = System.Threading.Timer;
+
+public sealed class GameScene : Scene
 {
     private Pet pet;
     private Timer hungerTime;
@@ -7,11 +9,21 @@
     {
         pet = new Pet("Pepe");
         hungerTime = new Timer(x => pet.SetFoodLvl(pet.FoodLvl - 1), null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
+        new Thread(Prueba).Start();
     }
 
-    public override void Update()
+    public override void Render()
     {
         Renderer.Render(pet.Sprite);
-        Renderer.Render(pet.FoodLvl.ToString());
+    }
+
+    public void Prueba()
+    {
+        Renderer.Render("Hola");
+        Console.WriteLine("Sas");
+    }
+    public override void Update()
+    {
+        // Renderer.Render(pet.FoodLvl.ToString());
     }
 }

@@ -1,6 +1,6 @@
 ﻿public class Pet
 {
-    private string name;
+    private string _name;
     private int maxFood = 100;
     private int maxHealth = 100;
     private int health;

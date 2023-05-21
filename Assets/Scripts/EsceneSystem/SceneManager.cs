@@ -1,12 +1,12 @@
 public class SceneManager
 {
-    public static void ExitGame() => Game.isRunning = false;
+    private static Dictionary<string, Func<Scene>> _scenes = new(){
+        {"Game", () => new GameScene()},
+        {"MainMenu", () => new MainMenuScene()}
+    };
 
-    public static void Play()
+    public static void LoadScenes(string name)
     {
-        if (Game.currentEscene.GetType() == typeof(GameScene))
-            return;
-
-        Game.currentEscene = new GameScene();
+        Game.currentEscene = _scenes[name]();
     }
 }
